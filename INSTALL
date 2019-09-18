@@ -1,0 +1,10 @@
+Building SYB
+
+
+See doc/readme-qt.rst for instructions on building SYB QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of SYB.
+
+See doc/build-*.txt for instructions on building sybd,
+the intended-for-services, no-graphical-interface, reference
+implementation of SYB.
