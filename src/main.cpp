@@ -2540,19 +2540,19 @@ bool LoadBlockIndex(bool fAllowNew)
 
         // MainNet:
 
-        /*CBlock(hash=000007b118aa0a8b881905a0d56b422d7b698179ebda0de56fd4ca5b151d3690, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=e755385b8309355d62e1239c7cd6fe4007552ba4d569ee4598b9d430e2e6791a, nTime=1568777649, nBits=1e0fffff, nNonce=596487, vtx=1, vchBlockSig=)
-  Coinbase(hash=e755385b83, nTime=1568777649, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+        /*CBlock(hash=00000c3d1e33429b95297aee05abf5807b2d17013a561f23e06baeab41e1b97f, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=ec71b60179162beb17eef7bad8cdc2ed398a5ff4acd9e3d3caf28b36b8526426, nTime=1568862909, nBits=1e0fffff, nNonce=654859, vtx=1, vchBlockSig=)
+  Coinbase(hash=ec71b60179, nTime=1568862909, ver=1, vin.size=1, vout.size=1, nLockTime=0)
     CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a3955532062656c69657665732061747461636b732063616d652066726f6d204972616e206173206f696c20737570706c69657320726573756d65)
     CTxOut(empty)
-  vMerkleTree: e755385b83
-block.GetHash() == 000007b118aa0a8b881905a0d56b422d7b698179ebda0de56fd4ca5b151d3690
-block.hashMerkleRoot == e755385b8309355d62e1239c7cd6fe4007552ba4d569ee4598b9d430e2e6791a
-block.nTime = 1568777649
-block.nNonce = 596487
+  vMerkleTree: ec71b60179
+block.GetHash() == 00000c3d1e33429b95297aee05abf5807b2d17013a561f23e06baeab41e1b97f
+block.hashMerkleRoot == ec71b60179162beb17eef7bad8cdc2ed398a5ff4acd9e3d3caf28b36b8526426
+block.nTime = 1568862909
+block.nNonce = 654859
 */
         const char* pszTimestamp = "US believes attacks came from Iran as oil supplies resume";
         CTransaction txNew;
-        txNew.nTime = 1568777649;
+        txNew.nTime = 1568862909;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2562,9 +2562,9 @@ block.nNonce = 596487
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1568777649;
+        block.nTime    = 1568862909;
         block.nBits    = 0x1e0fffff;
-        block.nNonce   = 596487;
+        block.nNonce   = 654859;
         
         if (true  && (block.GetHash() != hashGenesisBlock)) {
 
@@ -2590,7 +2590,7 @@ block.nNonce = 596487
         printf("block.nTime = %u \n", block.nTime);
         printf("block.nNonce = %u \n", block.nNonce);
                 
-        assert(block.hashMerkleRoot == uint256("0xe755385b8309355d62e1239c7cd6fe4007552ba4d569ee4598b9d430e2e6791a"));
+        assert(block.hashMerkleRoot == uint256("0xec71b60179162beb17eef7bad8cdc2ed398a5ff4acd9e3d3caf28b36b8526426"));
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
 
