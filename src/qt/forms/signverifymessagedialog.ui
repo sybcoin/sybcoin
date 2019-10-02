@@ -51,7 +51,7 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_SM">
            <property name="toolTip">
-            <string>The address to sign the message with (e.g. Tr51pHp2GPpYQCqxcTWZC6jLT86b2oYRZC)</string>
+            <string>The address to sign the message with (e.g. SY3NimWquxSfqUWAw3NgvF4Fi6rmoBe9nd)</string>
            </property>
            <property name="maxLength">
             <number>34</number>
@@ -254,7 +254,7 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_VM">
            <property name="toolTip">
-            <string>The address the message was signed with (e.g. Tr51pHp2GPpYQCqxcTWZC6jLT86b2oYRZC)</string>
+            <string>The address the message was signed with (e.g. SY3NimWquxSfqUWAw3NgvF4Fi6rmoBe9nd)</string>
            </property>
            <property name="maxLength">
             <number>34</number>
